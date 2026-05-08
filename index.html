@@ -3,232 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Just Me & My Squeegee | Window Cleaning · Sarasota, FL</title>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<title>Move SRQ | Sarasota's #1 Moving Company</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --sky: #0ea5e9;
-    --sky-dark: #0369a1;
-    --sky-deep: #082f49;
-    --sky-pale: #bae6fd;
-    --sun: #f59e0b;
-    --sun-light: #fcd34d;
+    --dark: #0d1117;
+    --dark2: #161b22;
+    --charcoal: #21262d;
+    --green: #2ea043;
+    --green-light: #3fb950;
+    --green-pale: #d2f8d6;
+    --gold: #e3b341;
+    --gold-light: #f0c952;
     --cream: #fdfaf4;
-    --sand: #fef9ee;
-    --text: #0c2340;
-    --muted: #476480;
-    --border: rgba(14,165,233,0.15);
+    --sand: #f5f0e8;
+    --text: #0d1117;
+    --muted: #4a5568;
+    --border: rgba(46,160,67,0.2);
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Nunito', sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
+  body { font-family: 'Barlow', sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
   ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-thumb { background: var(--sky); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb { background: var(--green); border-radius: 3px; }
 
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(8,47,73,0.97); backdrop-filter: blur(16px);
-    border-bottom: 3px solid var(--sky);
+    background: rgba(13,17,23,0.98); backdrop-filter: blur(16px);
+    border-bottom: 3px solid var(--green);
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 5%; height: 68px;
+    padding: 0 5%; height: 70px;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.5);
   }
-  .nav-logo-main { font-size: 17px; font-weight: 900; color: #fff; line-height: 1.2; }
-  .nav-logo-main span { color: var(--sky-pale); }
-  .nav-logo-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; }
+  .nav-logo-main { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 900; color: #fff; text-transform: uppercase; letter-spacing: 1px; line-height: 1.1; }
+  .nav-logo-main span { color: var(--green-light); }
+  .nav-logo-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase; }
   .nav-links { display: flex; gap: 28px; }
-  .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; font-weight: 600; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--sky-pale); }
-  .nav-cta { background: var(--sun); color: var(--sky-deep); font-size: 13px; font-weight: 800; padding: 10px 22px; border-radius: 50px; text-decoration: none; transition: all 0.2s; }
-  .nav-cta:hover { transform: translateY(-1px); }
+  .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
+  .nav-links a:hover { color: var(--green-light); }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .nav-phone { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.85); text-decoration: none; }
+  .nav-cta { background: var(--green); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; padding: 10px 24px; text-decoration: none; transition: all 0.2s; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 4px; }
+  .nav-cta:hover { background: var(--green-light); transform: translateY(-1px); }
 
-  /* HERO — Florida home exterior */
+  /* HERO */
   .hero {
     min-height: 100vh; position: relative; overflow: hidden;
-    display: flex; align-items: flex-end;
-    background: var(--sky-deep);
+    display: flex; align-items: center;
+    background: var(--dark);
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=1800&q=80') center/cover no-repeat;
+    opacity: 0.18;
   }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,47,73,0.97) 0%, rgba(8,47,73,0.6) 45%, rgba(8,47,73,0.15) 100%); }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,17,23,0.97) 0%, rgba(13,17,23,0.8) 50%, rgba(13,17,23,0.5) 100%); }
+  .hero-green-glow { position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(46,160,67,0.12) 0%, transparent 65%); pointer-events: none; }
+  .hero-gold-glow { position: absolute; bottom: -80px; left: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(227,179,65,0.08) 0%, transparent 65%); pointer-events: none; }
   .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; z-index: 2; }
   .hero-wave svg { display: block; width: 100%; }
-  .hero-content { position: relative; z-index: 3; padding: 0 5% 90px; width: 100%; }
-  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: #fff; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
-  .eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: #90ff90; animation: pulse 2s infinite; }
+  .hero-inner { position: relative; z-index: 3; padding: 90px 5% 80px; width: 100%; display: grid; grid-template-columns: 1fr 340px; gap: 60px; align-items: center; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(46,160,67,0.12); border: 1px solid rgba(46,160,67,0.35); color: var(--green-light); font-size: 11px; font-weight: 700; padding: 5px 14px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase; }
+  .edot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-light); animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  h1 { font-size: clamp(44px, 7vw, 82px); font-weight: 900; color: #fff; line-height: 1.0; letter-spacing: -1px; margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-  h1 .script { font-family: 'Lora', serif; font-style: italic; color: var(--sky-pale); display: block; font-size: 0.65em; font-weight: 600; letter-spacing: 0; margin-bottom: 4px; }
-  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.75); font-weight: 400; max-width: 500px; line-height: 1.85; margin-bottom: 36px; }
+  h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(56px, 9vw, 112px); font-weight: 900; color: #fff; line-height: 0.9; letter-spacing: -1px; margin-bottom: 24px; text-transform: uppercase; text-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+  h1 .green { color: var(--green-light); }
+  h1 .gold { color: var(--gold); }
+  .hero-sub { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 520px; line-height: 1.8; margin-bottom: 36px; font-weight: 400; }
   .hero-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
-  .hero-pill { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.9); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; }
+  .hero-pill { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); font-size: 11px; font-weight: 600; padding: 5px 14px; letter-spacing: 0.5px; }
+  .hero-pill.green { background: rgba(46,160,67,0.12); border-color: rgba(46,160,67,0.35); color: var(--green-light); }
   .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
-  .btn-sun { background: var(--sun); color: var(--sky-deep); font-size: 13px; font-weight: 800; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 20px rgba(245,158,11,0.4); }
-  .btn-sun:hover { transform: translateY(-2px); }
-  .btn-ghost { background: rgba(255,255,255,0.12); color: #fff; font-size: 13px; font-weight: 700; padding: 14px 28px; border-radius: 50px; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.2s; }
-  .btn-ghost:hover { border-color: #fff; }
-  .hero-stats { display: flex; gap: 0; }
-  .hstat { padding: 20px 32px; background: rgba(8,47,73,0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-right: none; }
-  .hstat:last-child { border-right: 1px solid rgba(255,255,255,0.1); }
-  .hstat-num { font-size: 30px; font-weight: 900; color: #fff; line-height: 1; }
-  .hstat-num span { color: var(--sky-pale); font-size: 16px; }
-  .hstat-label { font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+  .btn-green { background: var(--green); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; padding: 16px 40px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; letter-spacing: 2px; text-transform: uppercase; box-shadow: 0 6px 20px rgba(46,160,67,0.35); border-radius: 4px; }
+  .btn-green:hover { background: var(--green-light); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(46,160,67,0.45); }
+  .btn-gold { background: var(--gold); color: var(--dark); font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; padding: 16px 32px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
 
-  /* TRUST */
-  .trust { background: var(--sky); padding: 14px 5%; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
-  .trust-item { display: flex; align-items: center; gap: 8px; color: var(--sky-deep); font-size: 12px; font-weight: 800; }
+  /* HERO STATS CARD */
+  .hero-card { background: rgba(13,17,23,0.85); backdrop-filter: blur(16px); border: 1px solid rgba(46,160,67,0.25); border-top: 3px solid var(--green); padding: 36px 32px; }
+  .hero-card-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--green-light); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; font-weight: 700; }
+  .hstat { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; align-items: flex-end; gap: 12px; }
+  .hstat:last-child { border: none; padding-bottom: 0; }
+  .hstat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -1px; }
+  .hstat-num span { color: var(--green-light); font-size: 22px; }
+  .hstat-label { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 1px; text-transform: uppercase; line-height: 1.4; padding-bottom: 7px; font-weight: 500; }
+  .sean-badge { margin-top: 20px; padding: 16px; background: rgba(46,160,67,0.08); border: 1px solid rgba(46,160,67,0.2); }
+  .sean-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--green-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; font-weight: 700; }
+  .sean-text { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; font-weight: 300; }
+
+  /* TICKER */
+  .ticker { background: var(--green); padding: 13px 0; overflow: hidden; }
+  .ticker-track { display: flex; animation: scroll 24s linear infinite; white-space: nowrap; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .ticker-item { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; padding: 0 28px; display: flex; align-items: center; gap: 14px; }
+  .tdot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); }
 
   /* SECTIONS */
   section { padding: 90px 5%; }
-  .stag { display: inline-flex; align-items: center; gap: 8px; background: rgba(14,165,233,0.08); border: 1px solid var(--border); color: var(--sky-dark); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
-  .stitle { font-size: clamp(28px, 4vw, 46px); font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 14px; }
-  .stitle em { font-family: 'Lora', serif; font-style: italic; color: var(--sky-dark); }
-  .ssub { color: var(--muted); font-size: 15px; max-width: 520px; line-height: 1.8; margin-bottom: 52px; }
-
-  /* ABOUT SHERI — Florida home exterior bg */
-  .sheri-bg {
-    position: relative; overflow: hidden;
-    background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1800&q=80') center/cover no-repeat fixed;
-  }
-  .sheri-overlay { position: absolute; inset: 0; background: rgba(8,47,73,0.89); }
-  .sheri-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-  .sheri-bg .stag { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--sky-pale); }
-  .sheri-bg .stitle { color: #fff; }
-  .sheri-bg .stitle em { color: var(--sky-pale); }
-  .sheri-bg .ssub { color: rgba(255,255,255,0.55); }
-  .reasons { display: flex; flex-direction: column; gap: 16px; }
-  .reason { display: flex; gap: 14px; align-items: flex-start; padding: 18px; background: rgba(255,255,255,0.06); border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); }
-  .reason-icon { font-size: 22px; min-width: 28px; }
-  .reason-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 4px; }
-  .reason-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
-  .sheri-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(14,165,233,0.25); border-radius: 20px; padding: 44px 40px; }
-  .sheri-card-title { font-size: 12px; font-weight: 700; color: var(--sky-pale); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
-  .sstat { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .sstat:last-child { border: none; }
-  .sstat-num { font-size: 30px; font-weight: 900; color: #fff; min-width: 70px; line-height: 1; }
-  .sstat-num span { color: var(--sky-pale); font-size: 16px; }
-  .sstat-label { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
-  .sheri-quote { margin-top: 20px; padding: 16px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); border-radius: 10px; }
-  .sheri-quote-text { font-size: 13px; color: rgba(255,255,255,0.6); font-style: italic; font-family: 'Lora', serif; line-height: 1.65; }
-  .sheri-quote-attr { font-size: 11px; color: var(--sun); font-weight: 700; margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; }
+  .stag { display: inline-flex; align-items: center; gap: 8px; background: rgba(46,160,67,0.08); border-left: 3px solid var(--green); color: var(--green); font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; padding: 5px 14px; margin-bottom: 16px; letter-spacing: 2px; text-transform: uppercase; }
+  .stitle { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(34px, 5vw, 58px); font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 0.95; margin-bottom: 14px; text-transform: uppercase; }
+  .stitle .gr { color: var(--green); }
+  .stitle .go { color: var(--gold); }
+  .ssub { color: var(--muted); font-size: 15px; max-width: 520px; line-height: 1.8; margin-bottom: 52px; font-weight: 400; }
 
   /* SERVICES */
   .services-bg { background: var(--sand); }
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-  .svc { background: #fff; border: 2px solid var(--border); border-radius: 16px; padding: 28px; transition: all 0.25s; position: relative; overflow: hidden; }
-  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--sky-dark), var(--sky)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-  .svc:hover { border-color: var(--sky); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(14,165,233,0.12); }
-  .svc:hover::before { transform: scaleX(1); }
-  .svc-icon { font-size: 32px; margin-bottom: 14px; }
-  .svc-name { font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
-  .svc-tag { font-size: 12px; color: var(--sky-dark); font-weight: 700; margin-bottom: 10px; }
-  .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2px; background: rgba(0,0,0,0.06); }
+  .svc { background: var(--cream); padding: 36px 30px; transition: all 0.25s; position: relative; overflow: hidden; border-top: 3px solid transparent; }
+  .svc:hover { background: #fff; border-top-color: var(--green); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(46,160,67,0.1); }
+  .svc-num { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--green); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; font-weight: 700; }
+  .svc-icon { font-size: 30px; margin-bottom: 14px; }
+  .svc-name { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.1; }
+  .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 400; }
 
-  /* GALLERY — all exterior Florida homes */
-  .gallery-bg { background: var(--sky-deep); }
-  .gallery-bg .stag { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--sky-pale); }
-  .gallery-bg .stitle { color: #fff; }
-  .gallery-bg .stitle em { color: var(--sky-pale); }
-  .gallery-bg .ssub { color: rgba(255,255,255,0.5); }
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; gap: 12px; }
-  .gitem { position: relative; overflow: hidden; border-radius: 12px; }
-  .gitem img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
-  .gitem:hover img { transform: scale(1.04); }
-  .gitem-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 16px; background: linear-gradient(to top, rgba(8,47,73,0.9), transparent); color: #fff; font-size: 13px; font-weight: 700; }
-  .gitem.a { grid-column: 1; grid-row: 1; height: 280px; }
-  .gitem.b { grid-column: 2; grid-row: 1; height: 280px; }
-  .gitem.c { grid-column: 3; grid-row: 1 / span 2; height: 580px; }
-  .gitem.d { grid-column: 1; grid-row: 2; height: 280px; }
-  .gitem.e { grid-column: 2; grid-row: 2; height: 280px; }
+  /* WHY SEAN */
+  .why-bg { background: var(--dark); position: relative; overflow: hidden; }
+  .why-bg::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 60px); }
+  .why-bg .stag { background: rgba(46,160,67,0.1); border-color: var(--green-light); color: var(--green-light); }
+  .why-bg .stitle { color: #fff; }
+  .why-bg .ssub { color: rgba(255,255,255,0.45); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; position: relative; z-index: 1; }
+  .why-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(46,160,67,0.2); border-top: 3px solid var(--green); padding: 44px 40px; }
+  .why-card-title { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; color: var(--green-light); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 28px; font-weight: 700; }
+  .wstat { display: flex; align-items: center; gap: 18px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .wstat:last-child { border: none; }
+  .wstat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; color: #fff; min-width: 80px; line-height: 1; letter-spacing: -0.5px; }
+  .wstat-num span { color: var(--green-light); }
+  .wstat-label { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5; font-weight: 400; }
+  .team-badge { margin-top: 20px; padding: 16px; background: rgba(227,179,65,0.08); border: 1px solid rgba(227,179,65,0.2); }
+  .team-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; font-weight: 700; }
+  .team-text { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.65; font-weight: 300; }
+  .reasons { display: flex; flex-direction: column; gap: 16px; }
+  .reason { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.07); transition: background 0.2s; }
+  .reason:hover { background: rgba(255,255,255,0.08); }
+  .reason-icon { font-size: 22px; min-width: 28px; }
+  .reason-title { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .reason-text { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.65; font-weight: 300; }
 
-  /* REVIEWS — exterior home bg */
+  /* REVIEWS */
   .reviews-bg {
     position: relative; overflow: hidden;
     background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=80') center/cover no-repeat;
   }
-  .reviews-overlay { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(8,47,73,0.94) 0%, rgba(3,105,161,0.88) 100%); }
+  .reviews-overlay { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(13,17,23,0.96), rgba(22,27,34,0.93)); }
   .reviews-inner { position: relative; z-index: 1; }
-  .reviews-bg .stag { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--sky-pale); }
+  .reviews-bg .stag { background: rgba(46,160,67,0.1); border-color: var(--green); color: var(--green-light); }
   .reviews-bg .stitle { color: #fff; }
-  .reviews-bg .stitle em { color: var(--sky-pale); }
   .reviews-top { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
-  .score-big { font-size: 72px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -2px; }
-  .score-stars { color: var(--sun); font-size: 22px; letter-spacing: 2px; }
-  .score-label { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; margin-top: 4px; }
-  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-  .review-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; backdrop-filter: blur(12px); }
-  .review-stars { color: var(--sun); font-size: 14px; margin-bottom: 12px; letter-spacing: 1px; }
-  .review-text { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.75; margin-bottom: 16px; font-style: italic; font-family: 'Lora', serif; }
-  .review-name { font-size: 13px; font-weight: 800; color: var(--sky-pale); }
-  .review-meta { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
-  .review-response { margin-top: 14px; padding: 12px 14px; background: rgba(255,255,255,0.06); border-left: 2px solid var(--sky); font-size: 12px; color: rgba(255,255,255,0.5); font-style: italic; line-height: 1.6; }
-  .review-response strong { color: var(--sky-pale); font-weight: 700; font-style: normal; }
+  .score-big { font-family: 'Barlow Condensed', sans-serif; font-size: 80px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -2px; }
+  .score-stars { color: var(--gold); font-size: 22px; letter-spacing: 2px; }
+  .score-label { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; margin-top: 4px; letter-spacing: 0.5px; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+  .review-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 28px; border-top: 3px solid transparent; transition: border-top-color 0.2s; }
+  .review-card:hover { border-top-color: var(--green); }
+  .review-stars { color: var(--gold); font-size: 14px; margin-bottom: 12px; letter-spacing: 1px; }
+  .review-text { font-size: 14px; color: rgba(255,255,255,0.88); line-height: 1.75; margin-bottom: 16px; font-style: italic; }
+  .review-name { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: var(--green-light); letter-spacing: 1px; text-transform: uppercase; }
+  .review-meta { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 3px; }
 
-  /* BOOKING — exterior home bg */
-  .booking-bg {
-    position: relative; overflow: hidden;
-    background: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1800&q=80') center/cover no-repeat;
-  }
-  .booking-overlay { position: absolute; inset: 0; background: rgba(254,249,238,0.96); }
-  .booking-inner { position: relative; z-index: 1; }
-  .booking-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; }
-  .form-card { background: var(--sky-deep); border-radius: 20px; padding: 44px 40px; }
-  .form-title { font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 6px; }
-  .form-sub { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+  /* BOOKING */
+  .booking-bg { background: var(--cream); position: relative; overflow: hidden; }
+  .booking-bg::before { content: ''; position: absolute; top: -80px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(46,160,67,0.06) 0%, transparent 70%); }
+  .booking-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; position: relative; z-index: 1; }
+  .form-card { background: var(--dark); border-top: 3px solid var(--green); padding: 48px 44px; box-shadow: 0 24px 64px rgba(0,0,0,0.2); }
+  .form-title { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+  .form-sub { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 28px; font-weight: 300; }
   .form-group { margin-bottom: 16px; }
-  .form-group label { display: block; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.45); margin-bottom: 6px; letter-spacing: 1.5px; text-transform: uppercase; }
-  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 13px; color: #fff; background: rgba(255,255,255,0.07); outline: none; transition: border-color 0.2s; }
-  .form-group select option { background: var(--sky-deep); }
-  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--sky); }
+  .form-group label { display: block; font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.4); margin-bottom: 6px; letter-spacing: 2px; text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 14px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); font-family: 'Barlow', sans-serif; font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s; border-radius: 4px; }
+  .form-group select option { background: var(--dark); }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.22); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green); background: rgba(255,255,255,0.08); }
   .form-group textarea { resize: vertical; min-height: 90px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .form-submit { width: 100%; background: var(--sun); color: var(--sky-deep); border: none; padding: 15px; border-radius: 50px; font-size: 13px; font-weight: 800; font-family: 'Nunito', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 8px; }
-  .form-submit:hover { transform: translateY(-1px); }
+  .form-submit { width: 100%; background: var(--green); color: #fff; border: none; padding: 16px; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; letter-spacing: 2.5px; text-transform: uppercase; transition: all 0.2s; margin-top: 8px; border-radius: 4px; }
+  .form-submit:hover { background: var(--green-light); transform: translateY(-1px); }
   .contact-info { padding-top: 8px; }
-  .contact-title { font-size: 38px; font-weight: 900; color: var(--text); line-height: 1.1; margin-bottom: 14px; }
-  .contact-title em { font-family: 'Lora', serif; font-style: italic; color: var(--sky-dark); }
-  .contact-sub { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 36px; }
+  .contact-title { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 900; color: var(--text); line-height: 0.95; margin-bottom: 16px; text-transform: uppercase; letter-spacing: -0.5px; }
+  .contact-title .gr { color: var(--green); }
+  .contact-sub { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 36px; font-weight: 400; }
   .clist { display: flex; flex-direction: column; }
   .citem { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
   .citem:first-child { padding-top: 0; }
   .citem:last-child { border: none; }
   .cicon { font-size: 20px; min-width: 26px; margin-top: 2px; }
-  .clabel { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-  .cval { font-size: 15px; font-weight: 700; color: var(--text); }
-  .cnote { font-size: 13px; color: var(--muted); margin-top: 2px; }
-  .open-pill { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 50px; }
-  .open-pill::before { content: '●'; font-size: 7px; animation: blink 2s infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .clabel { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .cval { font-size: 15px; font-weight: 600; color: var(--text); }
+  .cnote { font-size: 13px; color: var(--muted); margin-top: 2px; font-weight: 400; }
+  .open-pill { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: var(--green-pale); border: 1px solid rgba(46,160,67,0.3); color: var(--green); font-size: 11px; font-weight: 700; padding: 4px 12px; letter-spacing: 1px; text-transform: uppercase; }
+  .open-pill::before { content: '●'; font-size: 7px; animation: pulse 2s infinite; }
 
   /* FOOTER */
-  footer { background: var(--sky-deep); padding: 44px 5% 32px; }
+  footer { background: var(--dark); padding: 48px 5% 32px; border-top: 3px solid var(--green); }
   .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 28px; }
-  .footer-brand { font-size: 18px; font-weight: 900; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
-  .footer-brand span { color: var(--sky-pale); }
+  .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 900; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .footer-brand span { color: var(--green-light); }
   .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.28); letter-spacing: 2px; text-transform: uppercase; }
   .footer-col { display: flex; flex-direction: column; gap: 10px; }
-  .footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sky-pale); margin-bottom: 4px; opacity: 0.75; }
-  .footer-col a { font-size: 13px; color: rgba(255,255,255,0.32); text-decoration: none; transition: color 0.2s; }
+  .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--green-light); margin-bottom: 4px; }
+  .footer-col a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; font-weight: 400; }
   .footer-col a:hover { color: rgba(255,255,255,0.8); }
   .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .footer-copy { font-size: 12px; color: rgba(255,255,255,0.18); }
-  .footer-tag { font-family: 'Lora', serif; font-size: 13px; font-style: italic; color: var(--sky-pale); opacity: 0.4; }
+  .footer-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: var(--green-light); opacity: 0.4; letter-spacing: 2px; text-transform: uppercase; }
 
-  @media (max-width: 860px) {
-    .sheri-inner, .booking-layout { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: 1fr 1fr; }
-    .gitem.c { grid-column: 1 / span 2; grid-row: auto; height: 260px; }
-    .gitem.a, .gitem.b, .gitem.d, .gitem.e { height: 220px; }
+  @media (max-width: 960px) {
+    .hero-inner, .why-grid, .booking-layout { grid-template-columns: 1fr; }
+    .hero-card { display: none; }
     .nav-links { display: none; }
     .form-row { grid-template-columns: 1fr; }
-    .hero-stats { flex-wrap: wrap; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 560px) {
-    .gallery-grid { grid-template-columns: 1fr; }
-    .gitem, .gitem.c { height: 220px !important; grid-column: 1; grid-row: auto; }
+    .services-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -236,128 +224,122 @@
 
 <nav>
   <div>
-    <div class="nav-logo-main">Just Me & My <span>Squeegee</span></div>
-    <div class="nav-logo-sub">Window Cleaning · Sarasota, FL</div>
+    <div class="nav-logo-main">Move<span>SRQ</span></div>
+    <div class="nav-logo-sub">Sarasota's Moving Experts</div>
   </div>
   <div class="nav-links">
-    <a href="#about">About Sheri</a>
     <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
     <a href="#reviews">Reviews</a>
-    <a href="#booking">Contact</a>
+    <a href="#booking">Book Now</a>
   </div>
-  <a href="tel:9415657518" class="nav-cta">☀️ Free Estimate</a>
+  <div class="nav-right">
+    <a href="tel:9415042627" class="nav-phone">(941) 504-2627</a>
+    <a href="#booking" class="nav-cta">Book a Move</a>
+  </div>
 </nav>
 
-<!-- HERO — Florida home exterior -->
+<!-- HERO -->
 <section class="hero" style="padding:0;">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow"><div class="eyebrow-dot"></div> Sarasota's Window Cleaning Specialist</div>
-    <h1><span class="script">Let the Florida Sunshine In —</span>Crystal Clear<br>Windows,<br>Every Time.</h1>
-    <p class="hero-sub">Sheri Spencer delivers professional, thorough window cleaning for Sarasota homes — without rushing, without shortcuts, and always on time.</p>
-    <div class="hero-pills">
-      <div class="hero-pill">⭐ 5.0 · 31 Reviews</div>
-      <div class="hero-pill">🌴 Sarasota, FL</div>
-      <div class="hero-pill">💧 Windows · Screens · Doors</div>
-      <div class="hero-pill">🆓 Free Estimates</div>
+  <div class="hero-green-glow"></div>
+  <div class="hero-gold-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow"><div class="edot"></div> Sarasota's #1 Rated Moving Company</div>
+      <h1>Sarasota's<br><span class="green">Most Trusted</span><br><span class="gold">Movers.</span></h1>
+      <p class="hero-sub">MoveSRQ delivers professional, careful, and stress-free moving across Sarasota. Sean and the team treat every piece like it's their own — and 218 five-star reviews prove it.</p>
+      <div class="hero-pills">
+        <div class="hero-pill green">⭐ 5.0 · 218 Reviews</div>
+        <div class="hero-pill">📍 Sarasota, FL</div>
+        <div class="hero-pill">🛡️ Fully Wrapped & Protected</div>
+        <div class="hero-pill">⚡ Same-Day Available</div>
+      </div>
+      <div class="hero-btns">
+        <a href="#booking" class="btn-green">📦 Book a Move</a>
+        <a href="tel:9415042627" class="btn-gold">📞 (941) 504-2627</a>
+      </div>
     </div>
-    <div class="hero-btns">
-      <a href="#booking" class="btn-sun">💧 Get a Free Estimate</a>
-      <a href="tel:9415657518" class="btn-ghost">📞 (941) 565-7518</a>
-    </div>
-    <div class="hero-stats">
+    <div class="hero-card">
+      <div class="hero-card-label">MoveSRQ By the Numbers</div>
       <div class="hstat"><div class="hstat-num">5.0<span>★</span></div><div class="hstat-label">Google Rating</div></div>
-      <div class="hstat"><div class="hstat-num">31</div><div class="hstat-label">Five-Star Reviews</div></div>
-      <div class="hstat"><div class="hstat-num">3<span>yrs+</span></div><div class="hstat-label">Repeat Customers</div></div>
+      <div class="hstat"><div class="hstat-num">218</div><div class="hstat-label">Five-Star Reviews</div></div>
+      <div class="hstat"><div class="hstat-num">0</div><div class="hstat-label">Damage Complaints</div></div>
+      <div class="sean-badge">
+        <div class="sean-title">👤 Ask for Sean</div>
+        <div class="sean-text">Sean communicates pricing, gives regular status updates, and personally ensures every job is done right.</div>
+      </div>
     </div>
   </div>
   <div class="hero-wave">
     <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#0ea5e9" d="M0,48L60,42C120,37,240,26,360,28C480,30,600,44,720,50C840,55,960,51,1080,44C1200,37,1320,26,1380,21L1440,16L1440,80L0,80Z"/>
+      <path fill="#2ea043" d="M0,48L60,42C120,37,240,26,360,28C480,30,600,44,720,50C840,55,960,51,1080,44C1200,37,1320,26,1380,21L1440,16L1440,80L0,80Z"/>
     </svg>
   </div>
 </section>
 
-<!-- TRUST -->
-<div class="trust">
-  <div class="trust-item">💧 Window Cleaning</div>
-  <div class="trust-item">🪟 Screen Cleaning</div>
-  <div class="trust-item">🚪 Sliding Door Cleaning</div>
-  <div class="trust-item">⭐ 5.0 Perfect Rating</div>
-  <div class="trust-item">🌴 Sarasota Local</div>
-  <div class="trust-item">🆓 Free Estimates</div>
-</div>
-
-<!-- ABOUT SHERI -->
-<section class="sheri-bg" id="about">
-  <div class="sheri-overlay"></div>
-  <div class="sheri-inner">
-    <div>
-      <div class="stag">🌴 About Sheri</div>
-      <div class="stitle">Professional Care<br><em>You Can Trust.</em></div>
-      <p class="ssub">Sheri Spencer has built a loyal following of Sarasota homeowners who trust her with their windows year after year — because she does it right every single time.</p>
-      <div class="reasons">
-        <div class="reason"><div class="reason-icon">⏰</div><div><div class="reason-title">Always On Time</div><div class="reason-text">Sheri is consistently punctual — customers across 31 reviews highlight her reliability and respect for their time.</div></div></div>
-        <div class="reason"><div class="reason-icon">🔍</div><div><div class="reason-title">Never Rushes</div><div class="reason-text">Sheri doesn't rush through the job. She takes the time to do it right — thorough and careful with every window and screen.</div></div></div>
-        <div class="reason"><div class="reason-icon">💰</div><div><div class="reason-title">Fairly Priced</div><div class="reason-text">Professional quality at a reasonable price. Customers come back every year and say it's always worth every penny.</div></div></div>
-        <div class="reason"><div class="reason-icon">🏠</div><div><div class="reason-title">A Pleasure to Have in Your Home</div><div class="reason-text">Professional, courteous, and genuinely pleasant to work with. Customers feel comfortable having Sheri in their home.</div></div></div>
-      </div>
-    </div>
-    <div class="sheri-card">
-      <div class="sheri-card-title">Why Sheri Stands Out</div>
-      <div class="sstat"><div class="sstat-num">5.0<span>★</span></div><div class="sstat-label">Perfect Google rating from 31 verified reviews</div></div>
-      <div class="sstat"><div class="sstat-num">3<span>yrs+</span></div><div class="sstat-label">Customers return to Sheri every single year</div></div>
-      <div class="sstat"><div class="sstat-num">31</div><div class="sstat-label">Five-star reviews — every single one</div></div>
-      <div class="sstat"><div class="sstat-num">Free</div><div class="sstat-label">Complimentary estimates on all jobs</div></div>
-      <div class="sheri-quote">
-        <div class="sheri-quote-text">"Windows need cleaning? Contact us today to get your FREE estimate!"</div>
-        <div class="sheri-quote-attr">— Sheri Spencer, Owner</div>
-      </div>
-    </div>
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Local Moves <span class="tdot"></span></span>
+    <span class="ticker-item">Furniture Moving <span class="tdot"></span></span>
+    <span class="ticker-item">Same-Day Available <span class="tdot"></span></span>
+    <span class="ticker-item">Fully Wrapped & Protected <span class="tdot"></span></span>
+    <span class="ticker-item">5.0 Stars · 218 Reviews <span class="tdot"></span></span>
+    <span class="ticker-item">Sean & Team <span class="tdot"></span></span>
+    <span class="ticker-item">Sarasota Local <span class="tdot"></span></span>
+    <span class="ticker-item">Stress-Free Moving <span class="tdot"></span></span>
+    <span class="ticker-item">Local Moves <span class="tdot"></span></span>
+    <span class="ticker-item">Furniture Moving <span class="tdot"></span></span>
+    <span class="ticker-item">Same-Day Available <span class="tdot"></span></span>
+    <span class="ticker-item">Fully Wrapped & Protected <span class="tdot"></span></span>
+    <span class="ticker-item">5.0 Stars · 218 Reviews <span class="tdot"></span></span>
+    <span class="ticker-item">Sean & Team <span class="tdot"></span></span>
+    <span class="ticker-item">Sarasota Local <span class="tdot"></span></span>
+    <span class="ticker-item">Stress-Free Moving <span class="tdot"></span></span>
   </div>
-</section>
+</div>
 
 <!-- SERVICES -->
 <section class="services-bg" id="services">
-  <div class="stag">💧 Services</div>
-  <div class="stitle">Everything Your <em>Windows</em> Need.</div>
-  <p class="ssub">From inside and outside glass to frames, screens, and sliding doors — Sheri handles it all with thorough attention to detail on every job.</p>
+  <div class="stag">What We Do</div>
+  <div class="stitle">Every Move,<br><span class="gr">Done Right.</span></div>
+  <p class="ssub">From single furniture pieces to full home moves — MoveSRQ handles it all with the same careful, professional approach that's earned 218 five-star reviews.</p>
   <div class="services-grid">
-    <div class="svc"><div class="svc-icon">🪟</div><div class="svc-name">Interior Window Cleaning</div><div class="svc-tag">Crystal clear from the inside out.</div><div class="svc-desc">Full interior window cleaning including glass, frames, and sills. Thorough, careful, and spotless — without rushing through the process.</div></div>
-    <div class="svc"><div class="svc-icon">☀️</div><div class="svc-name">Exterior Window Cleaning</div><div class="svc-tag">Let the Florida sunshine in.</div><div class="svc-desc">Professional exterior cleaning to remove dirt, salt air buildup, hard water spots, and Florida's year-round grime. Streak free every time.</div></div>
-    <div class="svc"><div class="svc-icon">🕸️</div><div class="svc-name">Screen Cleaning</div><div class="svc-tag">Florida screens need regular care.</div><div class="svc-desc">Thorough cleaning of all window and door screens. Florida's humidity and pollen build up fast — Sheri restores them to like-new condition.</div></div>
-    <div class="svc"><div class="svc-icon">🚪</div><div class="svc-name">Sliding Door Cleaning</div><div class="svc-tag">Smooth, clear, and spotless.</div><div class="svc-desc">Complete cleaning of sliding glass doors including tracks, frames, and glass panels — a specialty that makes a huge difference.</div></div>
-    <div class="svc"><div class="svc-icon">🖼️</div><div class="svc-name">Window Frame Cleaning</div><div class="svc-tag">Details make the difference.</div><div class="svc-desc">Cleaning of window frames, sills, and mullions — the finishing details that make your windows look truly immaculate.</div></div>
-    <div class="svc"><div class="svc-icon">🏠</div><div class="svc-name">Full Home Packages</div><div class="svc-tag">Complete window care.</div><div class="svc-desc">Complete window cleaning packages for condos and homes of all sizes. Sheri has cleaned everything from small condos to large family homes.</div></div>
+    <div class="svc"><div class="svc-num">01 — Local</div><div class="svc-icon">🏠</div><div class="svc-name">Local Moving</div><div class="svc-desc">Full local moves across Sarasota and surrounding areas. Sean coordinates everything — pricing, timing, and status updates so you're never left wondering.</div></div>
+    <div class="svc"><div class="svc-num">02 — Furniture</div><div class="svc-icon">🛋️</div><div class="svc-name">Furniture Moving</div><div class="svc-desc">Single pieces or entire rooms. The team wraps and protects every item with professional care — even getting a heavy couch through a narrow door at an angle.</div></div>
+    <div class="svc"><div class="svc-num">03 — Same-Day</div><div class="svc-icon">⚡</div><div class="svc-name">Same-Day & Last Minute</div><div class="svc-desc">Need it done today? MoveSRQ has handled last-minute moves with the same professionalism as planned ones. Call Sean and he'll make it happen.</div></div>
+    <div class="svc"><div class="svc-num">04 — Delivery</div><div class="svc-icon">📦</div><div class="svc-name">Store & Retailer Delivery</div><div class="svc-desc">Bought something from Crate & Barrel, Ashley, or any other store? MoveSRQ picks it up and delivers it to your home — safely and efficiently.</div></div>
+    <div class="svc"><div class="svc-num">05 — Office</div><div class="svc-icon">🏢</div><div class="svc-name">Office & Commercial Moving</div><div class="svc-desc">Professional office furniture moving and commercial relocations. Wrapped, protected, and placed exactly where you need it — with zero disruption.</div></div>
+    <div class="svc"><div class="svc-num">06 — Loading</div><div class="svc-icon">🚛</div><div class="svc-name">Loading & Unloading</div><div class="svc-desc">Already have a truck? MoveSRQ provides professional loading and unloading labor. The team does the heavy lifting so you don't have to.</div></div>
   </div>
 </section>
 
-<!-- GALLERY — all Florida home exteriors -->
-<section class="gallery-bg" id="gallery">
-  <div class="stag">🌴 Florida Homes</div>
-  <div class="stitle">Clean Windows,<br><em>Beautiful Homes.</em></div>
-  <p class="ssub">Florida homes look their best when the windows sparkle — letting in the sunshine and showing off those gorgeous exteriors.</p>
-  <div class="gallery-grid">
-    <div class="gitem a">
-      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80" alt="Florida home exterior">
-      <div class="gitem-label">Florida Homes Deserve the Best</div>
+<!-- WHY MOVESRQ -->
+<section class="why-bg" id="why">
+  <div class="why-grid">
+    <div>
+      <div class="stag">Why MoveSRQ</div>
+      <div class="stitle">Sarasota's Most<br><span class="go">Trusted</span> Team.</div>
+      <p class="ssub">218 five-star reviews don't happen by accident. MoveSRQ has built a reputation on careful handling, clear communication, and a team that genuinely cares about your move.</p>
+      <div class="reasons">
+        <div class="reason"><div class="reason-icon">🛡️</div><div><div class="reason-title">Everything Wrapped & Protected</div><div class="reason-text">Every piece is properly wrapped and protected. The seller watching one move was impressed by how well they cared for the furniture.</div></div></div>
+        <div class="reason"><div class="reason-icon">📱</div><div><div class="reason-title">Clear Communication</div><div class="reason-text">Sean communicates pricing upfront and gives regular status updates throughout the move. No surprises, no stress.</div></div></div>
+        <div class="reason"><div class="reason-icon">💪</div><div><div class="reason-title">No Job Too Tough</div><div class="reason-text">Narrow doors, heavy couches, awkward angles — the team figures it out. Customers are consistently impressed by what they're willing to do.</div></div></div>
+        <div class="reason"><div class="reason-icon">⭐</div><div><div class="reason-title">218 Five-Star Reviews</div><div class="reason-text">A perfect 5.0 across 218 reviews. Every customer. Every move. That's the MoveSRQ standard.</div></div></div>
+      </div>
     </div>
-    <div class="gitem b">
-      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Beautiful Florida exterior home">
-      <div class="gitem-label">Crystal Clear Every Time</div>
-    </div>
-    <div class="gitem c">
-      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Florida home front exterior">
-      <div class="gitem-label">Spotless Results</div>
-    </div>
-    <div class="gitem d">
-      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="Florida home with palm trees">
-      <div class="gitem-label">Let the Sunshine In</div>
-    </div>
-    <div class="gitem e">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Florida home exterior">
-      <div class="gitem-label">Sarasota Homes Love Sheri</div>
+    <div class="why-card">
+      <div class="why-card-title">MoveSRQ At a Glance</div>
+      <div class="wstat"><div class="wstat-num">5.0<span>★</span></div><div class="wstat-label">Perfect Google rating across all 218 reviews</div></div>
+      <div class="wstat"><div class="wstat-num">218</div><div class="wstat-label">Verified five-star reviews from Sarasota customers</div></div>
+      <div class="wstat"><div class="wstat-num">Same<span> day</span></div><div class="wstat-label">Last-minute and same-day moves available</div></div>
+      <div class="wstat"><div class="wstat-num">Free</div><div class="wstat-label">Quotes on every job — call or message Sean</div></div>
+      <div class="team-badge">
+        <div class="team-title">👷 The Team</div>
+        <div class="team-text">Sean, Omar, Curtis, Jaedan, and Kurtis — each one professional, careful, and committed to making your move stress-free.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -366,37 +348,34 @@
 <section class="reviews-bg" id="reviews">
   <div class="reviews-overlay"></div>
   <div class="reviews-inner">
-    <div class="stag">⭐ Reviews</div>
-    <div class="stitle">What Sarasota<br><em>Homeowners Say.</em></div>
+    <div class="stag">Reviews</div>
+    <div class="stitle" style="color:#fff;">218 Reasons to <span style="color:var(--green-light);">Choose MoveSRQ.</span></div>
     <div class="reviews-top">
       <div class="score-big">5.0</div>
       <div>
         <div class="score-stars">★★★★★</div>
-        <div style="font-size:16px; font-weight:800; color:#fff; margin-top:4px;">31 Google Reviews · Perfect Rating</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; color:#fff; margin-top:4px; text-transform:uppercase; letter-spacing:1px;">218 Google Reviews · Perfect Rating</div>
         <div class="score-label">Sarasota, FL · Verified</div>
       </div>
     </div>
     <div class="reviews-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Sheri has cleaned our windows, doors and screens in our home for the past three years. She is extremely professional, fairly priced, and is a pleasure to have in your home. Sheri always does a thorough job. I highly recommend Sheri!"</div>
-        <div class="review-name">Lori Serpico</div>
-        <div class="review-meta">Google Review · 2 reviews · 1 year ago</div>
-        <div class="review-response"><strong>Sheri:</strong> "Thank you so much Lori! I appreciate you having me back every year to do the cleaning!"</div>
+        <div class="review-text">"Sean, Curtis and Omar did a fabulous job moving a very heavy new couch into our home. Our doors aren't very wide, so two of them had to muscle it in at an angle to fit through, twice! They were professional, careful, and got it done."</div>
+        <div class="review-name">Larry Sauriol</div>
+        <div class="review-meta">Google Local Guide · 44 reviews · 3 months ago</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Sheri was extremely professional and didn't rush through the job. Our windows and sliding door needed a thorough cleaning — we contacted Sheri after her great reviews and we are very pleased."</div>
-        <div class="review-name">Anita Mahure</div>
-        <div class="review-meta">Google Review · 4 reviews · 1 year ago</div>
-        <div class="review-response"><strong>Sheri:</strong> "Thank you so much Anita, this review is so thoughtful! I look forward to coming back for another cleaning!"</div>
+        <div class="review-text">"We found beautiful floor model bookshelves at Crate & Barrel and needed movers. The manager recommended Sean — and I can see why. He was very nice and responsive, got a crew to us quickly, and they did an incredible job."</div>
+        <div class="review-name">Bryanna Fox</div>
+        <div class="review-meta">Google Review · 13 reviews · 3 months ago</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Had Sheri in to clean the inside, outside, frames and screens on my mother's condo — she did an amazing job! On time, professional, courteous and diligent. Would most definitely recommend Sheri for your needs."</div>
-        <div class="review-name">Diane McCarey</div>
-        <div class="review-meta">Google Review · 7 reviews · 2 years ago</div>
-        <div class="review-response"><strong>Sheri:</strong> "Thank you Diane! I appreciate the work and the wonderful review!"</div>
+        <div class="review-text">"They did a fabulous job! The person I bought the furniture from was even impressed by how great a job they did wrapping to protect the furniture. Jaedan, Omar and Curtis were great movers. Thanks Sean @ Move SRQ."</div>
+        <div class="review-name">Cindy Totty</div>
+        <div class="review-meta">Google Review · 1 review · 3 months ago</div>
       </div>
     </div>
   </div>
@@ -404,47 +383,45 @@
 
 <!-- BOOKING -->
 <section class="booking-bg" id="booking">
-  <div class="booking-overlay"></div>
-  <div class="booking-inner">
-    <div class="booking-layout">
-      <div class="contact-info">
-        <div class="stag">📞 Get in Touch</div>
-        <div class="contact-title">Get Your <em>Free</em> Estimate Today.</div>
-        <div class="contact-sub">Fill out the form and Sheri will be in touch to arrange your free estimate. Or call directly — she's open until 5:30 PM.</div>
-        <div class="clist">
-          <div class="citem"><div class="cicon">📞</div><div><div class="clabel">Phone</div><div class="cval">(941) 565-7518</div><div class="cnote">Call during business hours</div><div class="open-pill">Open · Closes 5:30 PM</div></div></div>
-          <div class="citem"><div class="cicon">📍</div><div><div class="clabel">Address</div><div class="cval">876 47th St</div><div class="cnote">Sarasota, FL 34234</div></div></div>
-          <div class="citem"><div class="cicon">⭐</div><div><div class="clabel">Rating</div><div class="cval">5.0 Stars · 31 Reviews</div><div class="cnote">"Always does a fantastic job, always on time."</div></div></div>
-          <div class="citem"><div class="cicon">🆓</div><div><div class="clabel">Estimates</div><div class="cval">Always Free</div><div class="cnote">No obligation — contact Sheri today</div></div></div>
-        </div>
+  <div class="booking-layout">
+    <div class="contact-info">
+      <div class="stag">Book a Move</div>
+      <div class="contact-title">READY TO<br><span class="gr">MOVE?</span></div>
+      <div class="contact-sub">Fill out the form and Sean will be in touch quickly with your quote. Or call directly — MoveSRQ is open until 7 PM.</div>
+      <div class="clist">
+        <div class="citem"><div class="cicon">📞</div><div><div class="clabel">Phone</div><div class="cval">(941) 504-2627</div><div class="cnote">Call or text Sean directly</div><div class="open-pill">Open · Closes 7 PM</div></div></div>
+        <div class="citem"><div class="cicon">📍</div><div><div class="clabel">Address</div><div class="cval">8383 Coash Rd</div><div class="cnote">Sarasota, FL 34241</div></div></div>
+        <div class="citem"><div class="cicon">⭐</div><div><div class="clabel">Rating</div><div class="cval">5.0 Stars · 218 Reviews</div><div class="cnote">"Stress-free moving experience — highly recommend!"</div></div></div>
+        <div class="citem"><div class="cicon">⚡</div><div><div class="clabel">Availability</div><div class="cval">Same-Day Available</div><div class="cnote">Last-minute moves welcome — call Sean</div></div></div>
       </div>
-      <div class="form-card">
-        <div class="form-title">💧 Get a Free Estimate</div>
-        <div class="form-sub">Sheri will get back to you quickly.</div>
-        <form action="https://formspree.io/f/mzdoepjp" method="POST">
-        <div class="form-row">
-          <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="John"></div>
-          <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith"></div>
-        </div>
-        <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(941) 555-0000"></div>
-        <div class="form-group"><label>Property Address</label><input type="text" name="address" placeholder="123 Main St, Sarasota FL"></div>
-        <div class="form-group">
-          <label>Service Needed</label>
-          <select name="service">
-            <option value="">Select a service...</option>
-            <option>Interior Window Cleaning</option>
-            <option>Exterior Window Cleaning</option>
-            <option>Interior & Exterior Package</option>
-            <option>Screen Cleaning</option>
-            <option>Sliding Door Cleaning</option>
-            <option>Full Home Package</option>
-            <option>Condo Package</option>
-          </select>
-        </div>
-        <div class="form-group"><label>Tell Sheri About Your Home</label><textarea name="message" placeholder="Number of windows, type of home, any special considerations..."></textarea></div>
-        <button class="form-submit">☀️ Send My Request</button>
-        </form>
+    </div>
+    <div class="form-card">
+      <div class="form-title">Book Your Move</div>
+      <div class="form-sub">Sean will respond quickly with your quote.</div>
+      <form action="https://formspree.io/f/xpqbpenl" method="POST">
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="John"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith"></div>
       </div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(941) 555-0000"></div>
+      <div class="form-group"><label>Moving From</label><input type="text" name="from" placeholder="123 Main St, Sarasota FL"></div>
+      <div class="form-group"><label>Moving To</label><input type="text" name="to" placeholder="456 Oak Ave, Sarasota FL"></div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select name="service">
+          <option value="">Select a service...</option>
+          <option>Local Move</option>
+          <option>Furniture Moving</option>
+          <option>Same-Day / Last Minute Move</option>
+          <option>Store / Retailer Delivery</option>
+          <option>Office & Commercial Moving</option>
+          <option>Loading & Unloading Only</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Move Date</label><input type="date" name="move_date"></div>
+      <div class="form-group"><label>Tell Us About Your Move</label><textarea name="message" placeholder="Number of rooms, large items, any access challenges..."></textarea></div>
+      <button class="form-submit">Book My Move</button>
+      </form>
     </div>
   </div>
 </section>
@@ -452,31 +429,31 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-brand">Just Me & My <span>Squeegee</span></div>
-      <div class="footer-brand-sub">876 47th St · Sarasota, FL 34234 · Sheri Spencer</div>
+      <div class="footer-brand">Move<span>SRQ</span></div>
+      <div class="footer-brand-sub">8383 Coash Rd · Sarasota, FL 34241</div>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Services</div>
-      <a href="#services">Window Cleaning</a>
-      <a href="#services">Screen Cleaning</a>
-      <a href="#services">Sliding Doors</a>
-      <a href="#services">Full Home Packages</a>
+      <a href="#services">Local Moving</a>
+      <a href="#services">Furniture Moving</a>
+      <a href="#services">Same-Day Moves</a>
+      <a href="#services">Store Delivery</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Company</div>
-      <a href="#about">About Sheri</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#booking">Contact</a>
+      <a href="#why">Why MoveSRQ</a>
+      <a href="#reviews">218 Reviews</a>
+      <a href="#booking">Book a Move</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
-      <a href="tel:9415657518">(941) 565-7518</a>
-      <a href="#booking">Free Estimate</a>
+      <a href="tel:9415042627">(941) 504-2627</a>
+      <a href="#booking">Get a Quote</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Just Me & My Squeegee · Sarasota, FL · All Rights Reserved</div>
-    <div class="footer-tag">Let the Florida Sunshine In.</div>
+    <div class="footer-copy">© 2026 MoveSRQ · Sarasota, FL · All Rights Reserved</div>
+    <div class="footer-tag">Sarasota's Most Trusted Movers.</div>
   </div>
 </footer>
 
