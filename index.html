@@ -231,6 +231,7 @@
     <a href="#services">Services</a>
     <a href="#why">Why Us</a>
     <a href="#reviews">Reviews</a>
+    <a href="gallery.html">Our Work</a>
     <a href="#booking">Book Now</a>
   </div>
   <div class="nav-right">
@@ -450,7 +451,188 @@
       <a href="tel:9415042627">(941) 504-2627</a>
       <a href="#booking">Get a Quote</a>
     </div>
+  </div><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work | MoveSRQ · Sarasota's #1 Movers</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --dark: #0d1117;
+    --dark2: #161b22;
+    --green: #2ea043;
+    --green-light: #3fb950;
+    --gold: #e3b341;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; background: var(--dark); color: #fff; }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-thumb { background: var(--green); border-radius: 3px; }
+
+  nav {
+    background: rgba(13,17,23,0.98);
+    border-bottom: 3px solid var(--green);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; height: 70px;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 900; color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
+  .nav-logo span { color: var(--green-light); }
+  .nav-right { display: flex; align-items: center; gap: 20px; }
+  .nav-back { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; transition: color 0.2s; }
+  .nav-back:hover { color: var(--green-light); }
+  .nav-cta { background: var(--green); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; padding: 9px 22px; text-decoration: none; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 4px; transition: all 0.2s; }
+  .nav-cta:hover { background: var(--green-light); }
+
+  .page-header {
+    padding: 80px 5% 50px;
+    background: linear-gradient(180deg, #161b22 0%, var(--dark) 100%);
+    position: relative; overflow: hidden;
+  }
+  .page-header::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(46,160,67,0.1) 0%, transparent 65%); pointer-events: none; }
+  .page-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--green-light); letter-spacing: 3px; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+  .page-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(48px, 7vw, 88px); font-weight: 900; color: #fff; text-transform: uppercase; letter-spacing: -1px; line-height: 0.9; margin-bottom: 16px; }
+  .page-title span { color: var(--green-light); }
+  .page-sub { font-size: 16px; color: rgba(255,255,255,0.5); max-width: 540px; line-height: 1.75; font-weight: 400; margin-bottom: 36px; }
+  .page-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+  .pstat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -1px; }
+  .pstat-num span { color: var(--green-light); }
+  .pstat-label { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+
+  .gallery-section { padding: 60px 5%; }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--green-light); letter-spacing: 3px; text-transform: uppercase; font-weight: 700; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(46,160,67,0.2); }
+
+  .photo-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .photo-grid-wide { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-bottom: 12px; }
+
+  .photo-card { position: relative; overflow: hidden; background: #161b22; }
+  .photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+  .photo-card:hover img { transform: scale(1.04); }
+  .photo-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,17,23,0.85) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s; }
+  .photo-card:hover .photo-card-overlay { opacity: 1; }
+  .photo-card-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 16px; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 1px; transform: translateY(8px); opacity: 0; transition: all 0.3s; }
+  .photo-card:hover .photo-card-label { transform: translateY(0); opacity: 1; }
+  .h-400 { height: 400px; }
+  .h-500 { height: 500px; }
+
+  .review-strip { background: #161b22; border: 1px solid rgba(46,160,67,0.2); border-left: 3px solid var(--green); padding: 28px 32px; margin: 32px 0; display: flex; gap: 20px; align-items: flex-start; }
+  .review-icon { font-size: 28px; min-width: 36px; margin-top: 4px; }
+  .review-strip-stars { color: var(--gold); font-size: 16px; letter-spacing: 2px; margin-bottom: 10px; }
+  .review-strip-text { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.7; font-style: italic; margin-bottom: 10px; }
+  .review-strip-author { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: var(--green-light); letter-spacing: 1px; text-transform: uppercase; }
+
+  .cta-section { padding: 80px 5%; text-align: center; background: linear-gradient(180deg, var(--dark) 0%, #161b22 100%); border-top: 1px solid rgba(46,160,67,0.15); }
+  .cta-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(36px, 5vw, 60px); font-weight: 900; color: #fff; text-transform: uppercase; margin-bottom: 14px; }
+  .cta-title span { color: var(--green-light); }
+  .cta-sub { color: rgba(255,255,255,0.5); font-size: 16px; margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-green { background: var(--green); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; padding: 16px 40px; text-decoration: none; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; transition: all 0.2s; display: inline-block; }
+  .btn-green:hover { background: var(--green-light); transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; padding: 14px 36px; text-decoration: none; border: 2px solid rgba(255,255,255,0.25); letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; transition: all 0.2s; display: inline-block; }
+  .btn-outline:hover { border-color: var(--green-light); color: var(--green-light); }
+
+  footer { background: #080c10; padding: 32px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-top: 3px solid var(--green); }
+  .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 900; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; }
+  .footer-brand span { color: var(--green-light); }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); }
+
+  @media (max-width: 760px) {
+    .photo-grid-2, .photo-grid-wide { grid-template-columns: 1fr; }
+    .h-400, .h-500 { height: 280px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Move<span>SRQ</span></a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-back">← Back to Home</a>
+    <a href="index.html#booking" class="nav-cta">Book a Move</a>
   </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-eyebrow">Real Moves · Real Results</div>
+  <div class="page-title">Our <span>Work.</span></div>
+  <div class="page-sub">Every photo here is a real completed job by Sean and the MoveSRQ team across Sarasota. Professional, careful, and stress-free — every single time.</div>
+  <div class="page-stats">
+    <div><div class="pstat-num">5.0<span>★</span></div><div class="pstat-label">Google Rating</div></div>
+    <div><div class="pstat-num">218</div><div class="pstat-label">Five-Star Reviews</div></div>
+    <div><div class="pstat-num">0</div><div class="pstat-label">Damage Complaints</div></div>
+  </div>
+</div>
+
+<div class="gallery-section">
+  <div class="section-label">📦 Completed Jobs — Sarasota, FL</div>
+
+  <div class="photo-grid-2">
+    <div class="photo-card h-400">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEtKo7MhQVHxOLR-gqVuIfB0hOTXJxHh9G6hPfJ0AY71VwR4mV92qGl9v58EM5gG2xGpuSrYkc_Z4srkWHdbV89FeQTsURvtI3J-ix7VQdlsvkUSXPRBZWZoPEle_UZlgedTARYpsvl_G0=w800-h600-k-no" alt="MoveSRQ job" onerror="this.src='https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=800&q=80'">
+      <div class="photo-card-overlay"></div>
+      <div class="photo-card-label">Professional & Careful</div>
+    </div>
+    <div class="photo-card h-400">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFvHPLQxVcAVfdD_ySR9Yyxds3FADkqK_w8ReBAKWI9P8Z2rpsmrDvjcoiOi5m6o-n7VM9sROTjkbrBzFL6pRZMG73_LCvn-hqGX8Jzk8ca1FJFFlBpLVd9jDB8jtgW8IYHBgIUkAQzHZbg=w800-h600-k-no" alt="MoveSRQ job" onerror="this.src='https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=800&q=80'">
+      <div class="photo-card-overlay"></div>
+      <div class="photo-card-label">Wrapped & Protected</div>
+    </div>
+  </div>
+
+  <div class="review-strip">
+    <div class="review-icon">⭐</div>
+    <div>
+      <div class="review-strip-stars">★★★★★</div>
+      <div class="review-strip-text">"They did a fabulous job! The person I bought the furniture from was even impressed by how great a job they did wrapping to protect the furniture. Jaedan, Omar and Curtis were great movers."</div>
+      <div class="review-strip-author">Cindy Totty — Google Review</div>
+    </div>
+  </div>
+
+  <div class="photo-grid-wide">
+    <div class="photo-card h-500">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCrhBzwfTOmnF0krYlajtLAoPVa06DQlK87BPUAUwjEziYp19YiTcTFajxNGI9kBvMUje61lhdoBmtmisAEsXSJwhxn0rDsjTYy7UHewKmLAmhyuoikfSl3c_q71CyD-31S-fd=w800-h600-k-no" alt="MoveSRQ job" onerror="this.src='https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=800&q=80'">
+      <div class="photo-card-overlay"></div>
+      <div class="photo-card-label">Every Item Handled With Care</div>
+    </div>
+    <div class="photo-card h-500">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPWq1b7LeAzo0JC2V4V3tObQQQkVwIQo3TrK8_5=w800-h600-k-no" alt="MoveSRQ team" onerror="this.src='https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=800&q=80'">
+      <div class="photo-card-overlay"></div>
+      <div class="photo-card-label">The MoveSRQ Team</div>
+    </div>
+  </div>
+
+  <div class="review-strip">
+    <div class="review-icon">⭐</div>
+    <div>
+      <div class="review-strip-stars">★★★★★</div>
+      <div class="review-strip-text">"Sean, Curtis and Omar did a fabulous job moving a very heavy new couch into our home. Our doors aren't very wide, so two of them had to muscle it in at an angle to fit through, twice!"</div>
+      <div class="review-strip-author">Larry Sauriol — Google Local Guide · 44 Reviews</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="cta-section">
+  <div class="cta-title">Ready to <span>Move?</span></div>
+  <div class="cta-sub">Join 218 satisfied Sarasota customers who trusted MoveSRQ. Call Sean today for a fast, free quote.</div>
+  <div class="cta-btns">
+    <a href="index.html#booking" class="btn-green">📦 Book a Move</a>
+    <a href="tel:9415042627" class="btn-outline">📞 (941) 504-2627</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">Move<span>SRQ</span></div>
+  <div class="footer-copy">© 2026 MoveSRQ · Sarasota, FL · (941) 504-2627</div>
+  <a href="index.html" style="color:rgba(255,255,255,0.35);font-size:13px;text-decoration:none;font-weight:500;">← Back to Home</a>
+</footer>
+
+</body>
+</html>
+
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 MoveSRQ · Sarasota, FL · All Rights Reserved</div>
     <div class="footer-tag">Sarasota's Most Trusted Movers.</div>
